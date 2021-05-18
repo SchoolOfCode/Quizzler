@@ -1,6 +1,37 @@
 # w8_team-project-java-lamps
 w8_team-project-java-lamps-wk-8-9 created by GitHub Classroom
 
+Tuesday 18th May
+
+Ideas for the app:
+Display 3 quizes on the home page that the player can just click on
+
+API:
+Display a dad joke during the game (maybe create a 5th button)
+
+Nice quiz website:
+https://kids.nationalgeographic.com/games/quizzes
+
+
+All categories displayed
+User get to chose quiz mode: multiple choice questions/boolean
+User chose the difficulty
+4 dropdowns menus next to each other in one section
+Another section with premade quizes presented as tiles, sorted by difficulty
+Display a picture for each quiz that is clickable
+
+
+### TO DO for Wednesday 19th May
+- Think of a name for the website
+- Continue wireframing on Figma
+- Select a color palette, agree color palette and add it to prototypes
+- Select font
+- Select logo idea
+    - Eacgh person choses their favourite, shares it on Slack and here, we decide as a team early afternoon
+- Start adding tasks to the Projects tab on Github to help planning
+
+Meeting Wednesday 19th May at 4.30pm
+
 
 Monday 17th May 
 
