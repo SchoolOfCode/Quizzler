@@ -1,6 +1,15 @@
 # w8_team-project-java-lamps
 w8_team-project-java-lamps-wk-8-9 created by GitHub Classroom
 
+Wednesday 19th May
+
+- Color scheme chosen: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=304FFE&secondary.color=FFD600
+- Primary font: Roboto
+- Secondary font: Lato
+- Logo created using wix
+- Name chose: Quizler
+
+
 Tuesday 18th May
 
 Ideas for the app:
