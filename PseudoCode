@@ -1,0 +1,12 @@
+HTML
+
+-Insert Logo
+-Create the navbar(links to different sections e.g where the random quiz is). Might include a log-in for user
+- Within the main- create different sections for the different categories (already done by Clarisse)
+- Container with drop down menu (user can select what they want)
+- create generate quiz button/get random  quiz button
+- Brief intro - make it a catchy intro and define the quiz and what makes it special(not a priority now)
+- Either have a pop-up window or clear the page onclick (so that the question and answers are displayed alone)
+- number of displayed tiles will be determined by how much display space we have
+
+
