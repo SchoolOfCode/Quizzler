@@ -1,7 +1,13 @@
 # w8_team-project-java-lamps
 w8_team-project-java-lamps-wk-8-9 created by GitHub Classroom
 
-Wednesday 19th May
+#####Thursday 20th May
+
+- Agreed on the splitting of the tasks (will reflect on the Projects tab)
+- Created a pseudo code file to help with the coding
+- Finished setting up the base files for programming
+
+#####Wednesday 19th May
 
 - Color scheme chosen: https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=304FFE&secondary.color=FFD600
 - Primary font: Roboto
@@ -10,7 +16,7 @@ Wednesday 19th May
 - Name chose: Quizler
 
 
-Tuesday 18th May
+#####Tuesday 18th May
 
 Ideas for the app:
 Display 3 quizes on the home page that the player can just click on
@@ -42,7 +48,7 @@ Display a picture for each quiz that is clickable
 Meeting Wednesday 19th May at 4.30pm
 
 
-Monday 17th May 
+#####Monday 17th May 
 
 Make a game using multiple API and make it look nice!
 
