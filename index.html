@@ -21,7 +21,40 @@
 
       <section id="selection-section-flex">
         <!-- Make your own quiz -->
-        <p>hi</p>
+        <section id="drop-down-section">
+          <select id="category-dropdown" >
+            <optgroup label="Choose a category"></optgroup>
+          </select>
+          <select id="gamemode-dropdown">
+            <optgroup label="Game Mode">
+              <option value="multiple">Multiple choice</option>
+              <option value="boolean">True/False</option>
+            </optgroup>
+          </select>
+
+          <select id="difficulty-dropdown">
+            <optgroup label="Select difficulty">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Difficult</option>
+            </optgroup>
+          </select>
+
+          <div id="questions-div">
+            <label for="quantity">Number of questions:</label>
+            <input
+              type="number"
+              id="num-questions"
+              name="quantity"
+              min="10"
+              max="50"
+            />
+          </div>
+        </section>
+        <section id="buttons-section">
+          <button id="generate-quiz-btn">Generate Quiz</button>
+          <button id="random-quiz-btn">Random Quiz</button>
+        </section>
       </section>
 
       <section>
