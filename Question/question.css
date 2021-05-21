@@ -1,0 +1,49 @@
+.question-container {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    font-size: 2.5rem;
+    border: 0.1rem solid;
+    padding: 2rem;
+}
+
+.choices-container {
+    display: flex;
+    margin: auto;
+    font-size: 2rem;
+    border: 0.1rem solid;
+}
+
+.choice-text {
+     display: flex;
+    margin: auto;
+    font-size: 2rem;
+    border: 0.1rem solid;
+    padding: 1.5rem 2.5rem;
+    width: 100%;
+}
+
+.choice-text:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 165, 235, 0.25);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: red;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-info-content {
+    text-align: center;
+    font-size: 1.5rem;
+}
