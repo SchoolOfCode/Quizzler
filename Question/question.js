@@ -16,7 +16,7 @@ let questionCounter = 0;
 let availableQuestions = [];
 
 const pointForCorrectAnswer = 1;
-const maximumNumberOfQuestions = 10;
+const maximumNumberOfQuestions = 10; // To change with the number of questions selected
 
 let questions = [];
 
@@ -35,6 +35,7 @@ fetch(
             
             const answerChoices = [...loadedQuestion.incorrect_answers]; //[...] is a spread operator, copies the array as it is
             formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            // add the correct answer in a random place in the array
             answerChoices.splice(
                 formattedQuestion.answer - 1,
                 0,
@@ -61,11 +62,13 @@ fetch(
             getNewQuestion();
         };
         
+        // Retrieves a question from the questions array
         getNewQuestion = () => {
             if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
-                //    Display final score 
-                // Button to return to homepage
+                //   TO DO Display final score 
+                // TO DO Button to return to homepage
             }
+            // Updates question Number on screen view
             questionCounter++;
             questionNumber.innerText = `Question ${questionCounter}/${maximumNumberOfQuestions}`;
             
@@ -89,16 +92,16 @@ fetch(
                 acceptingAnswers = false;
                 const selectedChoice = element.target;
                 const selectedAnswer = selectedChoice.dataset['number'];
-                
+                // Checks if the answer chosen is the correct answer
                 const classToApply =
                 selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-                
+                // if it is add ! point to the score
                 if (classToApply === 'correct') {
                     incrementScore(pointForCorrectAnswer);
                 }
-                
+                // Highlight the correct answer in green or the wrong answer in red
                 selectedChoice.parentElement.classList.add(classToApply);
-                
+                // Wait 1 second before displaying new question
                 setTimeout(() => {
                     selectedChoice.parentElement.classList.remove(classToApply);
                     getNewQuestion();
