@@ -1,9 +1,10 @@
 #selection-section-flex {
   border: 2px blueviolet solid;
+  /* just for flexbox styling */
 }
 
 #drop-down-section {
-  border-bottom: 5px #ffd600 solid;
+  border-bottom: 10px #ffd600 solid;
   background-color: #304ffe;
   display: flex;
   justify-content: space-evenly;
@@ -15,6 +16,12 @@
   font-weight: 500;
 }
 
+option {
+  text-align: center;
+  color: pink;
+  background-color: blueviolet;
+}
+
 #buttons-section {
   display: flex;
   justify-content: center;
@@ -23,9 +30,14 @@
 #generate-quiz-btn {
   margin: 30px;
   height: 40px;
+  font-weight: 600;
+  background-color: #c7a500;
+  padding: 10px;
 }
 
 #random-quiz-btn {
   margin: 30px;
   height: 40px;
+  background-color: #c7a500;
+  padding: 10px;
 }

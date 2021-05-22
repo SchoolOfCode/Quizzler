@@ -10,19 +10,38 @@ const category_dropdown = document.getElementById("category-dropdown");
 category_dropdown.length = 0;
 category_dropdown.selectedIndex = 0;
 
+let defaultOption = document.createElement("option");
+// defaultOption.disabled = true; // makes it an optgroup!
+defaultOption.label = "TOPIC";
+category_dropdown.add(defaultOption);
+
 async function fetchCategory() {
   let request = await fetch("https://opentdb.com/api_category.php"); //categories
   let data = await request.json();
-  data = data.trivia_categories;
-  for (let i = 0; i < data.length; i++) {
+  return data
+  // data = data.trivia_categories;
+  // for (let i = 0; i < data.length; i++) {
+  //   let option = document.createElement("option");
+  //   option.text = data[i].name;
+  //   option.value = data[i].id;
+  //   categoryArray.push(option.value);
+  //   category_dropdown.add(option);
+  // }
+}
+
+function loadCategories(data) {
+  let category = data.trivia_categories;
+  for (let i = 0; i < category.length; i++) {
     let option = document.createElement("option");
-    option.text = data[i].name;
-    option.value = data[i].id;
-    categoryArray.push(option.value);
+    option.text = category[i].name;
+    option.value = category[i].id;
+    categoryArray.push(category.value);
     category_dropdown.add(option);
   }
-}
-fetchCategory();
+};
+
+fetchCategory().then(loadCategories).catch((err => console.log(err)));
+
 
 function setCategoryValue() {
   let e = document.getElementById("category-dropdown");
