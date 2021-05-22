@@ -19,14 +19,6 @@ async function fetchCategory() {
   let request = await fetch("https://opentdb.com/api_category.php"); //categories
   let data = await request.json();
   return data
-  // data = data.trivia_categories;
-  // for (let i = 0; i < data.length; i++) {
-  //   let option = document.createElement("option");
-  //   option.text = data[i].name;
-  //   option.value = data[i].id;
-  //   categoryArray.push(option.value);
-  //   category_dropdown.add(option);
-  // }
 }
 
 function loadCategories(data) {
