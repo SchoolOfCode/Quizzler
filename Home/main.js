@@ -27,13 +27,13 @@ function loadCategories(data) {
     let option = document.createElement("option");
     option.text = category[i].name;
     option.value = category[i].id;
-    categoryArray.push(category.value);
+    categoryArray.push(category[i].id);
     category_dropdown.add(option);
   }
 };
 
-fetchCategory().then(loadCategories).catch((err => console.log(err)));
-
+fetchCategory().then(data => loadCategories(data)).catch((err => console.log(err)));
+// fetchCategory().then(loadCategories).catch((err => console.log(err))); this works too :)
 
 function setCategoryValue() {
   let e = document.getElementById("category-dropdown");
@@ -84,6 +84,7 @@ const generate_quiz_btn = document.getElementById("generate-quiz-btn");
 generate_quiz_btn.addEventListener("click", fetchQuiz);
 
 async function getRandomQuiz() {
+  console.log(categoryArray);
   const difficultyArray = ["easy", "medium", "difficult"];
   difficulty =
     difficultyArray[Math.floor(Math.random() * difficultyArray.length)];
@@ -94,8 +95,9 @@ async function getRandomQuiz() {
   numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
 
-  let url = `https://opentdb.com/api.php?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
-  console.log(url);
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
+  console.log(quizUrl);
+  window.location.href = '../Question/question.html' + quizUrl;
   let request = await fetch(url);
   let data = request.json();
   console.log(data);
