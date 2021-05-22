@@ -20,9 +20,15 @@ const maximumNumberOfQuestions = 10; // To change with the number of questions s
 
 let questions = [];
 
+let urlParams = new URLSearchParams(window.location.search);
+console.log(urlParams.toString());
+
+let quizURL = urlParams.toString();
+console.log(`https://opentdb.com/api.php?${quizURL}`);
+
 // Fetch request to the API
 fetch(
-    'https://opentdb.com/api.php?amount=10&category=20&difficulty=medium&type=multiple'
+    `https://opentdb.com/api.php?${quizURL}`
     )
     .then((response) => {
         return response.json();
