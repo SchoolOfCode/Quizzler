@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="question.css">
+    <!-- Add link to index.html -->
+    <title>Quizler</title>
+</head>
+
+<body>
+    <header>
+        <!-- Logo goes here -->
+        <!-- Navbar goes here -->
+    </header>
+    
+    <main>
+        <section>
+            <div class="game-info">
+<!-- Display question number -->
+            <div class="game-info-content question-number">
+                <p>Question</p>
+                <h2 id="question-number" class="question-number-text">1/10</h2>
+            </div>
+
+            <!-- Display score -->
+            <div class="game-info-content score">
+                <p>Score</p>
+                <h2 id="score" class="score-text">0</h2>
+            </div>
+            </div>
+
+            <!-- Flex container with the question -->
+            <div id="question-container" class="question question-container">
+            <h2 id="question" class="question">What is the answer to this question?</h2>
+            </div>
+
+            <!-- Flex container with the answers -->
+            <div id="choices-mcq-container" class="choices mcq choices-container">
+            <div class="choice-text" data-number="1">A</div>
+            <div class="choice-text" data-number="2">B</div>
+            <div class="choice-text" data-number="3">C</div>
+            <div class="choice-text" data-number="4">D</div>
+            </div>
+
+            <!-- Next question button -->
+            <button id="next-question-mcq" class="btn next-question-button">Next question</button>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Credit to the API goes here -->
+        <!-- API's URL: https://opentdb.com/api_config.php -->
+    </footer>
+
+    <script src="question.js"></script>
+</body>
+</html>
+
+
