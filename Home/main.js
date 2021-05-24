@@ -83,7 +83,7 @@ async function fetchQuiz() {
 const generate_quiz_btn = document.getElementById("generate-quiz-btn");
 generate_quiz_btn.addEventListener("click", fetchQuiz);
 
-async function getRandomQuiz() {
+function getRandomQuiz() {
   console.log(categoryArray);
   const difficultyArray = ["easy", "medium", "difficult"];
   difficulty =
@@ -93,14 +93,13 @@ async function getRandomQuiz() {
   gameMode = gameModeArray[Math.floor(Math.random() * gameModeArray.length)];
 
   numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
+  
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
 
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
   window.location.href = '../Question/question.html' + quizUrl;
-  let request = await fetch(url);
-  let data = request.json();
-  console.log(data);
+ 
 }
 
 const generate_random_btn = document.getElementById("random-quiz-btn");
