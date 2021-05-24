@@ -79,7 +79,7 @@ fetch(
             }
             // Updates question Number on screen view
             questionCounter++;
-            questionNumber.innerText = `Question ${questionCounter}/${maximumNumberOfQuestions}`;
+            questionNumber.innerText = `${questionCounter}/${maximumNumberOfQuestions}`;
             
             const questionIndex = Math.floor(Math.random() * availableQuestions.length);
             currentQuestion = availableQuestions[questionIndex];
