@@ -1,90 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <title>Quizler</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Quizler</title>
+  </head>
 
-<body>
-  <header>
-    <img id="img" img src="logo.png"/>
-    <nav>
-      <ul>
-        <li><a href="#">Suggestions</a></li>
-        <li><a href="#">Random Quiz</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <main>
-    <article id="intro">
-      <p>Welcome to Quizler the go-to app for all things quiz related.</p>
-      <p>Whether you want a quick brain-teaser or a fun quiz competition we are sure you will find what you are looking for here! </p>
-    </article>
-    
-    <section id="selection-section-flex">
-      <!-- Make your own quiz -->
-      <section id="drop-down-section">
-        <select id="category-dropdown">
-          <!-- <option id="topic" disabled selected>TOPIC</option> -->
-        </select>
-        
-        <select id="gamemode-dropdown">
-          <option disabled selected>GAME MODE</option>
-          <option value="multiple">Multiple choice</option>
-          <option value="boolean">True/False</option>
-        </select>
-        
-        <select id="difficulty-dropdown">
-          <option disabled selected>DIFFICULTY</option>
-          <option value="easy">Easy</option>
-          <option value="medium">Medium</option>
-          <option value="hard">Difficult</option>
-        </select>
-        
-        <div id="questions-div">
-          <label for="quantity">NUMBER OF QUESTIONS</label>
-          <input
-          type="number"
-          id="num-questions"
-          name="quantity"
-          min="10"
-          max="50"
-          />
-        </div>
+  <body>
+    <header>
+      <img id="img" img src="logo.png" />
+      <nav>
+        <ul>
+          <li><a href="#">Suggestions</a></li>
+          <li><a href="#">Random Quiz</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article id="intro">
+        <p>Welcome to Quizler the go-to app for all things quiz related.</p>
+        <p>
+          Whether you want a quick brain-teaser or a fun quiz competition we are sure you will find
+          what you are looking for here!
+        </p>
+      </article>
+
+      <section id="selection-section-flex">
+        <!-- Make your own quiz -->
+        <section id="drop-down-section">
+          <select id="category-dropdown">
+            <!-- <option id="topic" disabled selected>TOPIC</option> -->
+          </select>
+
+          <select id="gamemode-dropdown">
+            <option disabled selected>GAME MODE</option>
+            <option value="multiple">Multiple choice</option>
+            <option value="boolean">True/False</option>
+          </select>
+
+          <select id="difficulty-dropdown">
+            <option disabled selected>DIFFICULTY</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Difficult</option>
+          </select>
+
+          <div id="questions-div">
+            <label for="quantity">NUMBER OF QUESTIONS</label>
+            <input type="number" id="num-questions" name="quantity" min="10" max="50" />
+          </div>
+        </section>
+        <section id="buttons-section">
+          <button id="generate-quiz-btn">Generate Quiz</button>
+          <button id="random-quiz-btn">Random Quiz</button>
+        </section>
       </section>
-      <section id="buttons-section">
-        <button id="generate-quiz-btn">Generate Quiz</button>
-        <button id="random-quiz-btn">Random Quiz</button>
-      </section>
-    </section>
-    
-    <section class="suggested-quizzes">
-      <div id="easy-quiz" class="suggested-quiz">
-        <img src="testPhoto.jpg" alt="Image of Easy Quiz" />
-        <h2>Easy Quiz</h2>
-      </div>
-      <div id="medium-quiz" class="suggested-quiz">
-        <img src="testPhoto.jpg" alt="Image of Medium Quiz" />
-        <h2>Medium Quiz</h2>
-      </div>
-      <div id="hard-quiz" class="suggested-quiz">
-        <img src="testPhoto.jpg" alt="Image of Hard Quiz" />
-        <h2>Hard Quiz</h2>
-      </div>
-    </section>
-  </main>
-  
-  <footer>
-    <!-- Add link to the API used -->
-  </footer>
-  
-  <script src="main.js"></script>
-  <script src="suggested-quiz.js"></script>
-</body>
+
+      <section class="suggested-quizzes"></section>
+    </main>
+
+    <footer>
+      <!-- Add link to the API used -->
+    </footer>
+
+    <script src="main.js"></script>
+    <script src="suggested-quiz.js"></script>
+  </body>
 </html>
