@@ -30,6 +30,7 @@ function loadCategories(data) {
     categoryArray.push(category[i].id);
     category_dropdown.add(option);
   }
+  console.log(categoryArray);
 };
 
 fetchCategory().then(data => loadCategories(data)).catch((err => console.log(err)));
@@ -93,13 +94,12 @@ function getRandomQuiz() {
   gameMode = gameModeArray[Math.floor(Math.random() * gameModeArray.length)];
 
   numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
-  
+
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
 
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
   window.location.href = '../Question/question.html' + quizUrl;
- 
 }
 
 const generate_random_btn = document.getElementById("random-quiz-btn");
