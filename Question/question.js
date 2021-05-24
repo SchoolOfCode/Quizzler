@@ -2,10 +2,10 @@
 // https://opentdb.com/api.php?amount=10&category=20&difficulty=medium&type=multiple
 
 // DOM variables
-const question = document.getElementById('question');
-const choices = Array.from(document.getElementsByClassName('choice-text'));
-const questionNumber = document.getElementById('question-number');
-const score = document.getElementById('score');
+const question = document.getElementById("question");
+const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionNumber = document.getElementById("question-number");
+const score = document.getElementById("score");
 const nexQuestionButton = document.querySelector("next-question-button");
 
 // Game variables
