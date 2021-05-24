@@ -4,15 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="endPage.css" />
     <title>Quizler</title>
   </head>
   <body>
-    <div class="score">
-      <p>FINAL SCORE</p>
-      <h2 id="score" class="score-text">0</h2>
-    </div>
+    <section class="score-section">
+      <div class="score-div">
+        <p>FINAL SCORE</p>
+        <h2 id="score"></h2>
+      </div>
+      <div class="flex-btn-div"><button id="return-home-btn"></button></div>
 
-    <button id="return-home"></button>
+      <div class="lottie">
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player
+          src="https://assets10.lottiefiles.com/private_files/lf30_6ocpfdil.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </section>
+
     <script src="endPage.js"></script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.score-section {
+    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.score-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  border-top: 10px #ffd600 solid;
+  border-bottom: 10px #ffd600 solid;
+  background-color: #304ffe;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+}
+
+#score {
+  color: white;
+}
+
+.flex-btn-div {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-top: 10px;
+}
+#return-home-btn {
+  background-color: #ffd600;
+  padding: 20px;
+  font-size: medium;
+}
+
+.lottie{
+    display: flex;
+    justify-content: center;
+}
