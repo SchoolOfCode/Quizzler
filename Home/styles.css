@@ -16,6 +16,8 @@ ul {
 
 li {
 	float: right;
+	margin-right: 15px;
+	margin-left: 15px;
 }
 
 #img {
@@ -29,11 +31,10 @@ li {
 nav a {
 	width: 100px;
 	display: block;
-	padding: 20px 15px;
+	padding: 20px;
 	text-decoration: none;
 	color: white;
 	font-family: "Roboto", sans-serif;
-	margin-right: 15px;
 	margin-bottom: 10px;
 }
 
@@ -43,7 +44,8 @@ nav a:hover {
 
 #intro {
 	text-align: center;
-	margin-top: 150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	font-family: "Roboto", sans-serif;
 	font-weight: bold;
 }
@@ -92,7 +94,6 @@ option {
 	padding: 10px;
 }
 
-
 .suggested-quizzes {
 	display: flex;
 	flex-wrap: wrap;
@@ -111,4 +112,17 @@ img {
 	max-width: 100%;
 }
 
+footer {
+	margin-top: 80px;
+	margin-left: 10px;
+	background-color: rgb(82, 80, 80);
+	text-align: center;
+	width: 100%;
+}
 
+footer a {
+	padding-right: 30px;
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	color: white;
+}
