@@ -87,7 +87,7 @@ async function fetchQuiz() {
 const generate_quiz_btn = document.getElementById("generate-quiz-btn");
 generate_quiz_btn.addEventListener("click", fetchQuiz);
 
-async function getRandomQuiz() {
+function getRandomQuiz() {
   console.log(categoryArray);
   const difficultyArray = ["easy", "medium", "difficult"];
   difficulty =
