@@ -109,10 +109,10 @@ fetch(
                     incrementScore(pointForCorrectAnswer);
                 }
                 // Highlight the correct answer in green or the wrong answer in red
-                selectedChoice.parentElement.classList.add(classToApply);
+                selectedChoice.classList.add(classToApply);
                 // Wait 1 second before displaying new question
                 setTimeout(() => {
-                    selectedChoice.parentElement.classList.remove(classToApply);
+                    selectedChoice.classList.remove(classToApply);
                     getNewQuestion();
                 }, 1000);
             });
