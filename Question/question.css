@@ -9,6 +9,9 @@ body {
     font-size: 2.5rem;
     border: 0.1rem solid;
     padding: 2rem;
+    background-color: #304ffe;
+    color: white;
+    border-radius: 15px;
 }
 
 .choices-container {
@@ -16,22 +19,30 @@ body {
     flex-wrap: wrap;
     margin: auto;
     font-size: 2rem;
-    border: 0.1rem solid;
+    gap: 12px;
+    padding-top: 20px;
 }
+
+/* .choices-container > div {
+    margin: 6px;
+} */
 
 .choice-text {
     margin: auto;
     font-size: 2rem;
     border: 0.1rem solid;
     padding: 1.5rem 2.5rem;
-    width: 50%;
+    width: 35%;
     text-align: center;
+    border-radius: 10px;
+    background-color: #ffd600;
+    color: black;
 }
 
 .choice-text:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 165, 235, 0.25);
-    transform: translateY(-0.1rem);
+    transform: translateY(-0.3rem);
     transition: transform 150ms;
 }
 

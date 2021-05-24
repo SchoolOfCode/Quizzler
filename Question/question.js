@@ -31,9 +31,11 @@ fetch(
     `https://opentdb.com/api.php?${quizURL}`
     )
     .then((response) => {
+        console.log(response);
         return response.json();
     })
     .then((loadedQuestions) => {
+        console.log(loadedQuestions);
         questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
                 question: loadedQuestion.question,
@@ -54,7 +56,8 @@ fetch(
                 });
                 
                 return formattedQuestion;
-            });
+        });
+        console.log(questions);
             startGame();
         })
         .catch((err) => {
