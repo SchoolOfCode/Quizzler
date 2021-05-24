@@ -75,7 +75,8 @@ fetch(
         getNewQuestion = () => {
             if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
                 // go to endPage if you've reached the end of the quiz
-                window.location.href = '../Question/endPage.html'
+                sessionStorage.setItem("gameScore", gameScore);
+                window.location.href = '../Question/endPage.html';
             }
             // Updates question Number on screen view
             questionCounter++;
