@@ -20,7 +20,7 @@ li {
 	margin-left: 15px;
 }
 
-#img {
+#logo-img {
 	margin-left: 20px;
 	position: absolute;
 	width: 85px;
@@ -115,7 +115,7 @@ img {
 footer {
 	margin-top: 80px;
 	margin-left: 10px;
-	background-color:#c7a500;
+	background-color:#0026ca;
 	text-align: center;
 	width: 100%;
 }
@@ -125,4 +125,8 @@ footer a {
 	font-family: "Roboto", sans-serif;
 	text-decoration: none;
 	color: white;
+}
+
+#footer-p{
+    color: white;
 }
