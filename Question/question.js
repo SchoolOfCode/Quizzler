@@ -23,12 +23,12 @@ let questions = [];
 let urlParams = new URLSearchParams(window.location.search);
 console.log(urlParams.toString());
 
-let quizURL = urlParams.toString();
-console.log(`https://opentdb.com/api.php?${quizURL}`);
+let quizUrl = urlParams.toString();
+console.log(`https://opentdb.com/api.php?${quizUrl}`);
 
 // Fetch request to the API
 fetch(
-    `https://opentdb.com/api.php?${quizURL}`
+    `https://opentdb.com/api.php?${quizUrl}`
     )
     .then((response) => {
         console.log(response);
@@ -56,8 +56,8 @@ fetch(
                 });
                 
                 return formattedQuestion;
-        });
-        console.log(questions);
+            });
+            console.log(questions);
             startGame();
         })
         .catch((err) => {
@@ -74,8 +74,8 @@ fetch(
         // Retrieves a question from the questions array
         getNewQuestion = () => {
             if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
-                //   TO DO Display final score 
-                // TO DO Button to return to homepage
+                // go to endPage if you've reached the end of the quiz
+                window.location.href = '../Question/endPage.html'
             }
             // Updates question Number on screen view
             questionCounter++;
