@@ -16,8 +16,33 @@ ul {
 
 li {
   float: right;
+}
+
+#img {
+  margin-left: 20px;
+  position: absolute;
+  width: 85px;
+  max-height: 100px;
+  height: auto;
+  overflow: hidden;
+}
+
+nav a {
+  width: 100px;
+  display: block;
+  padding: 20px 15px;
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  margin-right: 15px;
+  margin-bottom: 10px;
+	float: right;
+	margin-right: 15px;
+	margin-left: 15px;
+
   margin-right: 15px;
   margin-left: 15px;
+
 }
 
 #logo-img {
@@ -28,21 +53,26 @@ li {
   overflow: hidden;
 }
 
-nav a {
-  width: 100px;
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  margin-bottom: 10px;
-}
-
 nav a:hover {
   background: grey;
 }
 
 #intro {
+  text-align: center;
+  margin-top: 150px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+
+}
+
+#selection-section-flex {
+  border: 2px blueviolet solid;
+  /* just for flexbox styling */
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -75,6 +105,11 @@ option {
 }
 
 #generate-quiz-btn {
+  margin: 30px;
+  height: 40px;
+  font-weight: 600;
+  background-color: #c7a500;
+  padding: 10px;
  margin: 30px;
   border-radius: 10px;
   background-color: #ffd600;
@@ -85,6 +120,9 @@ option {
 
 #random-quiz-btn {
   margin: 30px;
+  height: 40px;
+  background-color: #c7a500;
+  padding: 10px;
   border-radius: 10px;
   background-color: #ffd600;
   padding: 20px;
