@@ -35,7 +35,7 @@ body {
 
 .choice-text {
     margin: auto;
-
+    
     border: 0.1rem solid;
     padding: 1.5rem 2.5rem;
     width: 35%;
@@ -68,6 +68,24 @@ body {
 .game-info-content {
     text-align: center;
     font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 80px;
+    margin-left: 10px;
+    background-color: #0026ca;
+    text-align: center;
+    width: 100%;
+}
+
+footer a {
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+#footer-p {
+    color: white;
 }
 
 @media only screen and (max-width: 600px) {
