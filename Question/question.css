@@ -53,11 +53,11 @@ body {
 }
 
 .correct {
-    background-color: green;
+    background-color: 	#0F9D58;
 }
 
 .incorrect {
-    background-color: red;
+    background-color: #DB4437;
 }
 
 .game-info {
