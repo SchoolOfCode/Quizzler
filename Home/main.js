@@ -32,8 +32,8 @@ function loadCategories(data) {
   }
 }
 fetchCategory()
-  .then((data) => loadCategories(data))
-  .catch((err) => console.log(err));
+.then((data) => loadCategories(data))
+.catch((err) => console.log(err));
 // fetchCategory().then(loadCategories).catch((err => console.log(err))); this works too :)
 
 function setCategoryValue() {
@@ -90,21 +90,17 @@ async function getRandomQuiz() {
   console.log(categoryArray);
   const difficultyArray = ["easy", "medium", "difficult"];
   difficulty = difficultyArray[Math.floor(Math.random() * difficultyArray.length)];
-
+  
   const gameModeArray = ["multiple", "boolean"];
   gameMode = gameModeArray[Math.floor(Math.random() * gameModeArray.length)];
-
+  
   numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
-
+  
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
   console.log(category);
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
 
-  window.location.href = "../Question/question.html" + quizUrl;
-  let request = await fetch(url);
-  let data = request.json();
-  console.log(data);
   if (gameMode === "boolean") {
     window.location.href = "../Boolean/boolean.html" + quizUrl;
   } else {
