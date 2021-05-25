@@ -20,3 +20,8 @@ HTML
 - number of displayed tiles will be determined by how much display space we have
 
 
+TO DO:
+- Link the Generated Quiz Button with the question page: load url
+- Link the suggested quizes with the question page: load urls
+
+

@@ -32,6 +32,12 @@ fetch(`https://opentdb.com/api.php?${quizURL}`)
     return response.json();
   })
   .then((loadedQuestions) => {
+=======
+    console.log(response);
+    return response.json();
+  })
+  .then((loadedQuestions) => {
+    console.log(loadedQuestions);
     questions = loadedQuestions.results.map((loadedQuestion) => {
       const formattedQuestion = {
         question: loadedQuestion.question,
@@ -41,6 +47,13 @@ fetch(`https://opentdb.com/api.php?${quizURL}`)
       formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
       // add the correct answer in a random place in the array
       answerChoices.splice(formattedQuestion.answer - 1, 0, loadedQuestion.correct_answer);
+
+      answerChoices.splice(
+        formattedQuestion.answer - 1,
+        0,
+        loadedQuestion.correct_answer
+      );
+
       // iterate through the choices you have in answerChoices, put them as answer 1-4
       answerChoices.forEach((choice, index) => {
         // get them dynamically by getting their choice index and assign it a choice
@@ -64,6 +77,7 @@ startGame = () => {
 
 // Retrieves a question from the questions array
 getNewQuestion = () => {
+
   if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
     //   TO DO Display final score
     // TO DO Button to return to homepage
@@ -71,6 +85,18 @@ getNewQuestion = () => {
   // Updates question Number on screen view
   questionCounter++;
   questionNumber.innerText = `Question ${questionCounter}/${maximumNumberOfQuestions}`;
+=======
+  if (
+    availableQuestions.length === 0 ||
+    questionCounter >= maximumNumberOfQuestions
+  ) {
+    sessionStorage.setItem("gameScore", gameScore);
+    window.location.href = "endPage.html";
+  }
+  // Updates question Number on screen view
+  questionCounter++;
+  questionNumber.innerText = `${questionCounter}/${maximumNumberOfQuestions}`;
+
 
   const questionIndex = Math.floor(Math.random() * availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
@@ -94,6 +120,10 @@ choices.forEach((choice) => {
     const selectedAnswer = selectedChoice.dataset["number"];
     // Checks if the answer chosen is the correct answer
     const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+=======
+    const classToApply =
+      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+
     // if it is add ! point to the score
     if (classToApply === "correct") {
       incrementScore(pointForCorrectAnswer);

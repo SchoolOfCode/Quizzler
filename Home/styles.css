@@ -36,6 +36,29 @@ nav a {
   font-family: "Roboto", sans-serif;
   margin-right: 15px;
   margin-bottom: 10px;
+=======
+	float: right;
+	margin-right: 15px;
+	margin-left: 15px;
+}
+
+#logo-img {
+	margin-left: 20px;
+	position: absolute;
+	width: 85px;
+	height: auto;
+	overflow: hidden;
+}
+
+nav a {
+	width: 100px;
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 10px;
+
 }
 
 nav a:hover {
@@ -43,10 +66,18 @@ nav a:hover {
 }
 
 #intro {
+
   text-align: center;
   margin-top: 150px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+=======
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+
 }
 
 #selection-section-flex {
@@ -109,4 +140,23 @@ option {
 }
 img {
   max-width: 100%;
+}
+
+footer {
+	margin-top: 80px;
+	margin-left: 10px;
+	background-color:#0026ca;
+	text-align: center;
+	width: 100%;
+}
+
+footer a {
+	padding-right: 30px;
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	color: white;
+}
+
+#footer-p{
+    color: white;
 }

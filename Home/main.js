@@ -30,7 +30,6 @@ function loadCategories(data) {
     categoryArray.push(category[i].id);
     category_dropdown.add(option);
   }
-}
 
 fetchCategory()
   .then((data) => loadCategories(data))
@@ -76,32 +75,44 @@ const difficulty_dropdown = document.getElementById("difficulty-dropdown");
 difficulty_dropdown.addEventListener("change", setDifficulty);
 
 async function fetchQuiz() {
-  let url = `https://opentdb.com/api.php?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
-  console.log(url);
-  let request = await fetch(url);
-  let data = request.json();
-  console.log(data);
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
+  console.log(quizUrl);
+  if (gameMode === boolean) {
+    window.location.href = '../Boolean/boolean.html' + quizURL;
+  }
+  else {
+    window.location.href = '../Question/question.html' + quizUrl;
+  }
 }
 const generate_quiz_btn = document.getElementById("generate-quiz-btn");
 generate_quiz_btn.addEventListener("click", fetchQuiz);
 
-async function getRandomQuiz() {
+function getRandomQuiz() {
   console.log(categoryArray);
   const difficultyArray = ["easy", "medium", "difficult"];
   difficulty = difficultyArray[Math.floor(Math.random() * difficultyArray.length)];
 
   const gameModeArray = ["multiple", "boolean"];
   gameMode = gameModeArray[Math.floor(Math.random() * gameModeArray.length)];
-
+  
   numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
+  
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
-
+  console.log(category);
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
+  
   window.location.href = "../Question/question.html" + quizUrl;
   let request = await fetch(url);
   let data = request.json();
   console.log(data);
+=======
+  if (gameMode === boolean) {
+    window.location.href = '../Boolean/boolean.html' + quizURL;
+  }
+  else {
+    window.location.href = '../Question/question.html' + quizUrl;
+  }
 }
 
 const generate_random_btn = document.getElementById("random-quiz-btn");

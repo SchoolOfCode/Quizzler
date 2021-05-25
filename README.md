@@ -1,3 +1,9 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/29dcab46-375d-41ae-bb99-abde34864faf/deploy-status)](https://app.netlify.com/sites/quizler8/deploys)
+
+[LIVE WEBSITE](https://quizler8.netlify.app/)
+
+*netflify not working since index.html is in group "Home"*
+
 # w8_team-project-java-lamps
 w8_team-project-java-lamps-wk-8-9 created by GitHub Classroom
 
