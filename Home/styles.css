@@ -69,8 +69,6 @@ nav a:hover {
 }
 
 #selection-section-flex {
-  border: 2px blueviolet solid;
-  /* just for flexbox styling */
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
