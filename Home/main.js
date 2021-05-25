@@ -30,6 +30,7 @@ function loadCategories(data) {
     categoryArray.push(category[i].id);
     category_dropdown.add(option);
   }
+  generateQuizzes();
 }
 fetchCategory()
   .then((data) => loadCategories(data))
