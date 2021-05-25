@@ -84,11 +84,16 @@ fetch(
             
             const questionIndex = Math.floor(Math.random() * availableQuestions.length);
             currentQuestion = availableQuestions[questionIndex];
-            question.innerText = currentQuestion.question;
+            question.innerText = currentQuestion.question.replace(
+                /&#039|&rsquo;|&quot;|&#39;|;/g,
+                "");
             
             choices.forEach((choice) => {
                 const number = choice.dataset['number'];
-                choice.innerText = currentQuestion['choice' + number];
+                let formattedChoice = currentQuestion['choice' + number]
+                choice.innerText = formattedChoice.replace(
+                /&#039|&rsquo;|&quot;|&#39;|;/g,
+                "");
             });
             
             availableQuestions.splice(questionIndex, 1);
