@@ -23,12 +23,12 @@ let questions = [];
 let urlParams = new URLSearchParams(window.location.search);
 console.log(urlParams.toString());
 
-let quizURL = urlParams.toString();
-console.log(`https://opentdb.com/api.php?${quizURL}`);
+let quizUrl = urlParams.toString();
+console.log(`https://opentdb.com/api.php?${quizUrl}`);
 
 // Fetch request to the API
 fetch(
-    `https://opentdb.com/api.php?${quizURL}`
+    `https://opentdb.com/api.php?${quizUrl}`
     )
     .then((response) => {
         console.log(response);
@@ -56,8 +56,8 @@ fetch(
                 });
                 
                 return formattedQuestion;
-        });
-        console.log(questions);
+            });
+            console.log(questions);
             startGame();
         })
         .catch((err) => {
@@ -74,8 +74,9 @@ fetch(
         // Retrieves a question from the questions array
         getNewQuestion = () => {
             if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
-                //   TO DO Display final score 
-                // TO DO Button to return to homepage
+                // go to endPage if you've reached the end of the quiz
+                sessionStorage.setItem("gameScore", gameScore);
+                window.location.href = '../Question/endPage.html';
             }
             // Updates question Number on screen view
             questionCounter++;
@@ -109,10 +110,10 @@ fetch(
                     incrementScore(pointForCorrectAnswer);
                 }
                 // Highlight the correct answer in green or the wrong answer in red
-                selectedChoice.parentElement.classList.add(classToApply);
+                selectedChoice.classList.add(classToApply);
                 // Wait 1 second before displaying new question
                 setTimeout(() => {
-                    selectedChoice.parentElement.classList.remove(classToApply);
+                    selectedChoice.classList.remove(classToApply);
                     getNewQuestion();
                 }, 1000);
             });

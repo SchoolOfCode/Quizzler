@@ -77,8 +77,8 @@ difficulty_dropdown.addEventListener("change", setDifficulty);
 async function fetchQuiz() {
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
-  if (gameMode === boolean) {
-    window.location.href = '../Boolean/boolean.html' + quizURL;
+  if (gameMode === "boolean") {
+    window.location.href = '../Boolean/boolean.html' + quizUrl;
   }
   else {
     window.location.href = '../Question/question.html' + quizUrl;
@@ -101,6 +101,7 @@ function getRandomQuiz() {
   console.log(category);
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
   console.log(quizUrl);
+
   
   window.location.href = "../Question/question.html" + quizUrl;
   let request = await fetch(url);
@@ -109,6 +110,9 @@ function getRandomQuiz() {
 =======
   if (gameMode === boolean) {
     window.location.href = '../Boolean/boolean.html' + quizURL;
+=======
+  if (gameMode === "boolean") {
+    window.location.href = '../Boolean/boolean.html' + quizUrl;
   }
   else {
     window.location.href = '../Question/question.html' + quizUrl;

@@ -1,5 +1,5 @@
 .score-section {
-    margin-top: 50px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -29,13 +29,15 @@
   margin-top: 10px;
 }
 #return-home-btn {
-  background-color: #ffd600;
   padding: 20px;
   font-size: medium;
+  font-weight: bold;
+  background-color: #ffd600;
+  border-radius: 10px;
 }
 
-.lottie{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+.lottie {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }

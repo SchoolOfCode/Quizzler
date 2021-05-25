@@ -29,10 +29,6 @@ console.log(`https://opentdb.com/api.php?${quizURL}`);
 // Fetch request to the API
 fetch(`https://opentdb.com/api.php?${quizURL}`)
   .then((response) => {
-    return response.json();
-  })
-  .then((loadedQuestions) => {
-=======
     console.log(response);
     return response.json();
   })
@@ -77,15 +73,6 @@ startGame = () => {
 
 // Retrieves a question from the questions array
 getNewQuestion = () => {
-
-  if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
-    //   TO DO Display final score
-    // TO DO Button to return to homepage
-  }
-  // Updates question Number on screen view
-  questionCounter++;
-  questionNumber.innerText = `Question ${questionCounter}/${maximumNumberOfQuestions}`;
-=======
   if (
     availableQuestions.length === 0 ||
     questionCounter >= maximumNumberOfQuestions
@@ -120,25 +107,102 @@ choices.forEach((choice) => {
     const selectedAnswer = selectedChoice.dataset["number"];
     // Checks if the answer chosen is the correct answer
     const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
-=======
-    const classToApply =
-      selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
+let quizUrl = urlParams.toString();
+console.log(`https://opentdb.com/api.php?${quizUrl}`);
 
-    // if it is add ! point to the score
-    if (classToApply === "correct") {
-      incrementScore(pointForCorrectAnswer);
-    }
-    // Highlight the correct answer in green or the wrong answer in red
-    selectedChoice.parentElement.classList.add(classToApply);
-    // Wait 1 second before displaying new question
-    setTimeout(() => {
-      selectedChoice.parentElement.classList.remove(classToApply);
-      getNewQuestion();
-    }, 1000);
-  });
-});
-
-incrementScore = (num) => {
-  gameScore += num;
-  score.innerText = gameScore;
-};
+fetch(
+    `https://opentdb.com/api.php?${quizUrl}`
+    )
+    .then((response) => {
+        console.log(response);
+        return response.json();
+    })
+    .then((loadedQuestions) => {
+        console.log(loadedQuestions);
+        questions = loadedQuestions.results.map((loadedQuestion) => {
+            const formattedQuestion = {
+                question: loadedQuestion.question,
+            };
+            
+            const answerChoices = [...loadedQuestion.incorrect_answers]; //[...] is a spread operator, copies the array as it is
+            formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
+            // add the correct answer in a random place in the array
+            answerChoices.splice(
+                formattedQuestion.answer - 1,
+                0,
+                loadedQuestion.correct_answer
+                );
+                // iterate through the choices you have in answerChoices, put them as answer 1-4
+                answerChoices.forEach((choice, index) => {
+                    // get them dynamically by getting their choice index and assign it a choice
+                    formattedQuestion['choice' + (index + 1)] = choice;
+                });
+                
+                return formattedQuestion;
+            });
+            console.log(questions);
+            startGame();
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+        
+        startGame = () => {
+            questionCounter = 0;
+            gameScore = 0;
+            availableQuestions = [...questions];
+            getNewQuestion();
+        };
+        
+        // Retrieves a question from the questions array
+        getNewQuestion = () => {
+            if (availableQuestions.length === 0 || questionCounter >= maximumNumberOfQuestions) {
+                // go to endPage if you've reached the end of the quiz
+                sessionStorage.setItem("gameScore", gameScore);
+                window.location.href = '../Question/endPage.html';
+            }
+            // Updates question Number on screen view
+            questionCounter++;
+            questionNumber.innerText = `${questionCounter}/${maximumNumberOfQuestions}`;
+            
+            const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+            currentQuestion = availableQuestions[questionIndex];
+            question.innerText = currentQuestion.question;
+            
+            choices.forEach((choice) => {
+                const number = choice.dataset['number'];
+                choice.innerText = currentQuestion['choice' + number];
+            });
+            
+            availableQuestions.splice(questionIndex, 1);
+            acceptingAnswers = true;
+        };
+        
+        choices.forEach((choice) => {
+            choice.addEventListener('click', (element) => {
+                if (!acceptingAnswers) return;
+                
+                acceptingAnswers = false;
+                const selectedChoice = element.target;
+                const selectedAnswer = selectedChoice.dataset['number'];
+                // Checks if the answer chosen is the correct answer
+                const classToApply =
+                selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+                // if it is add ! point to the score
+                if (classToApply === 'correct') {
+                    incrementScore(pointForCorrectAnswer);
+                }
+                // Highlight the correct answer in green or the wrong answer in red
+                selectedChoice.classList.add(classToApply);
+                // Wait 1 second before displaying new question
+                setTimeout(() => {
+                    selectedChoice.classList.remove(classToApply);
+                    getNewQuestion();
+                }, 1000);
+            });
+        });
+        
+        incrementScore = (num) => {
+            gameScore += num;
+            score.innerText = gameScore;
+        };
