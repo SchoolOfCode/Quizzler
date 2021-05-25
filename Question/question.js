@@ -26,7 +26,6 @@ console.log(urlParams.toString());
 let quizUrl = urlParams.toString();
 console.log(`https://opentdb.com/api.php?${quizUrl}`);
 
-// Fetch request to the API
 fetch(
     `https://opentdb.com/api.php?${quizUrl}`
     )
