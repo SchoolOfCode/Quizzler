@@ -110,3 +110,5 @@ async function getRandomQuiz() {
 
 const generate_random_btn = document.getElementById("random-quiz-btn");
 generate_random_btn.addEventListener("click", getRandomQuiz);
+
+console.log()
