@@ -63,13 +63,13 @@ async function generateEasyQuiz() {
   easyDiv.addEventListener("click", playEasyQuiz);
 }
 async function generateMediumQuiz() {
-  const MediumQuizName = await getQuizTopics(randomTopicsArray[1], "medium");
-  const easyDiv = await displayQuiz("Medium", MediumQuizName);
+  const mediumQuizName = await getQuizTopics(randomTopicsArray[1], "medium");
+  const easyDiv = await displayQuiz("Medium", mediumQuizName);
   easyDiv.addEventListener("click", playMediumQuiz);
 }
 async function generateHardQuiz() {
-  const HardQuizName = await getQuizTopics(randomTopicsArray[2], "hard");
-  const easyDiv = await displayQuiz("Hard", HardQuizName);
+  const hardQuizName = await getQuizTopics(randomTopicsArray[2], "hard");
+  const easyDiv = await displayQuiz("Hard", hardQuizName);
   easyDiv.addEventListener("click", playHardQuiz);
 }
 function playEasyQuiz() {
