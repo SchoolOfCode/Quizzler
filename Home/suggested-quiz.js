@@ -2,7 +2,7 @@ async function getImage(topic) {
   let image = await fetch(`https://bing-image-search1.p.rapidapi.com/images/search?q=${topic}`, {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "9ec856775cmsh18791d11e3541e2p1eeaf3jsn760b3c3d7241",
+      "x-rapidapi-key": "ea349901b7mshedf8bfd80447b88p1fb049jsn7dc51faa3c39",
       "x-rapidapi-host": "bing-image-search1.p.rapidapi.com",
     },
   });
