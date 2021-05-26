@@ -6,7 +6,7 @@ scoreDisplay.innerText = gameScore;
 
 const return_homePage_btn = document.getElementById("return-home-btn");
 return_homePage_btn.innerText = "Back to main page";
-return_homePage_btn.addEventListener("click", () => (window.location.href = "../Home/index.html"));
+return_homePage_btn.addEventListener("click", () => (window.location.href = "../index.html"));
 
 async function createDadJoke() {
   const response = await fetch("https://icanhazdadjoke.com/", {
