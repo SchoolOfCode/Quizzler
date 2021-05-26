@@ -85,7 +85,7 @@ async function fetchQuiz() {
   console.log("fetchQuiz original URL is:", quizUrl);
 
   if (gameMode === "boolean") {
-    quizUrl = `?amount=${numOfQuestions}&category=${category}&gameMode=${gameMode}`;
+    quizUrl = `?amount=${numOfQuestions}&category=${category}&type=${gameMode}`;
     console.log("generatedQuiz boolean URL is:", quizUrl);
 
     window.location.href = "../Boolean/boolean.html" + quizUrl;
@@ -102,7 +102,7 @@ async function getRandomQuiz() {
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
   console.log("category ID:", category);
 
-  let quizUrl = `?amount=${numOfQuestions}&category=${category}&gameMode=${gameMode}`;
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&type=${gameMode}`;
   console.log("quizURL:", quizUrl);
 
   if (gameMode === "boolean") {
