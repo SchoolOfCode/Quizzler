@@ -1,156 +1,176 @@
 body {
-  background-color: #e0e0e0;
-  font-family: Roboto, Lato, sans-serif;
+	background-color: #e0e0e0;
+	font-family: Roboto, Lato, sans-serif;
 }
 
 nav {
-  width: 100%;
-  background-color: #0026ca;
-  overflow: auto;
+	width: 100%;
+	background-color: #0026ca;
+	overflow: auto;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 li {
-  float: right;
+	float: right;
 }
 
 #img {
-  margin-left: 20px;
-  position: absolute;
-  width: 85px;
-  max-height: 100px;
-  height: auto;
-  overflow: hidden;
+	margin-left: 20px;
+	position: absolute;
+	width: 85px;
+	max-height: 100px;
+	height: auto;
+	overflow: hidden;
 }
 
 nav a {
-  width: 100px;
-  display: block;
-  padding: 20px 15px;
-  text-decoration: none;
-  color: white;
-  font-family: "Roboto", sans-serif;
-  margin-right: 15px;
-  margin-bottom: 10px;
-  float: right;
-  margin-right: 15px;
-  margin-left: 15px;
-
-  margin-right: 15px;
-  margin-left: 15px;
+	width: 100px;
+	display: block;
+	padding: 20px 15px;
+	text-decoration: none;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	float: right;
 }
 
 #logo-img {
-  margin-left: 20px;
-  position: absolute;
-  width: 85px;
-  height: auto;
-  overflow: hidden;
+	margin-left: 20px;
+	position: absolute;
+	width: 85px;
+	height: auto;
+	overflow: hidden;
 }
 
 nav a:hover {
-  background: grey;
+	background: #ffd600;
 }
 
 #intro {
-  text-align: center;
-  margin-top: 150px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	text-align: center;
 }
 
 #selection-section-flex {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
 }
 
 #drop-down-section {
-  border-bottom: 10px #ffd600 solid;
-  background-color: #304ffe;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  height: 50px;
-  padding: 10px;
-  color: white;
-  font-weight: 500;
+	border-bottom: 10px #ffd600 solid;
+	background-color: #304ffe;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	height: 50px;
+	padding: 10px;
+	color: white;
+	font-weight: 500;
 }
 
 option {
-  text-align: center;
-  color: pink;
-  background-color: blueviolet;
+	text-align: center;
+	color: pink;
+	background-color: blueviolet;
 }
 
 #buttons-section {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 #generate-quiz-btn {
-  margin: 30px;
-  font-size: medium;
-  font-weight: bold;
-  border-radius: 10px;
-  background-color: #ffd600;
-  padding: 20px;
+	margin: 30px;
+	font-size: medium;
+	font-weight: bold;
+	border-radius: 10px;
+	background-color: #ffd600;
+	padding: 20px;
 }
 
 #random-quiz-btn {
-  margin: 30px;
-  font-size: medium;
-  font-weight: normal;
-  border-radius: 10px;
-  background-color: #ffd600;
-  padding: 20px;
+	margin: 30px;
+	font-size: medium;
+	font-weight: normal;
+	border-radius: 10px;
+	background-color: #ffd600;
+	padding: 20px;
 }
 
 .suggested-quizzes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 .suggested-quiz {
-  background-color: #304ffe;
-  border: solid 5px #304ffe;
-  flex: 0 1 30%;
-  overflow: hidden;
-  margin: 5px;
-  text-align: center;
-  color: white;
+	background-color: #304ffe;
+	border: solid 5px #304ffe;
+	flex: 0 1 30%;
+	overflow: hidden;
+	margin: 5px;
+	text-align: center;
+	color: white;
 }
 img {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 footer {
-  margin-top: 80px;
-  margin-left: 10px;
-  background-color: #0026ca;
-  text-align: center;
-  width: 100%;
+	margin-top: 80px;
+	margin-left: 10px;
+	background-color: #0026ca;
+	text-align: center;
+	width: 100%;
 }
 
 footer a {
-  padding-right: 30px;
-  font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  color: white;
+	padding-right: 30px;
+	font-family: "Roboto", sans-serif;
+	text-decoration: none;
+	color: white;
+}
+
+footer a:hover {
+	background: #ffd600;
 }
 
 #footer-p {
-  color: white;
+	color: white;
+}
+
+@media only screen and (max-width: 768px) {
+	nav {
+		width: 100%;
+		height: auto;
+	}
+
+	nav li {
+		width: 100%;
+		display: inline;
+	}
+
+	nav ul {
+		width: 100%;
+	}
+	#selection-section-flex {
+		display: inline;
+	}
+
+	#drop-down-section {
+		display: flex;
+		flex-direction: column;
+	}
 }
