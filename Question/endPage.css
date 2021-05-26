@@ -1,0 +1,51 @@
+body {
+  background-color: #e0e0e0;
+  font-family: Roboto, Lato, sans-serif;
+}
+
+.score-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.score-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+  border-top: 10px #ffd600 solid;
+  border-bottom: 10px #ffd600 solid;
+  background-color: #304ffe;
+  color: white;
+  font-weight: 600;
+  font-size: large;
+}
+
+#score {
+  color: white;
+}
+
+.flex-btn-div {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  margin-top: 10px;
+}
+#return-home-btn {
+  padding: 20px;
+  font-size: medium;
+  font-weight: bold;
+  background-color: #ffd600;
+  border-radius: 10px;
+}
+
+.lottie {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.dad-jokes {
+  text-align: center;
+}
