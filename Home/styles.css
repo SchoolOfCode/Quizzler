@@ -60,10 +60,6 @@ nav a:hover {
 
 #intro {
   text-align: center;
-  margin-top: 150px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
   font-family: "Roboto", sans-serif;
@@ -71,8 +67,6 @@ nav a:hover {
 }
 
 #selection-section-flex {
-  border: 2px blueviolet solid;
-  /* just for flexbox styling */
   text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -106,28 +100,20 @@ option {
 
 #generate-quiz-btn {
   margin: 30px;
-  height: 40px;
-  font-weight: 600;
-  background-color: #c7a500;
-  padding: 10px;
-  margin: 30px;
+  font-size: medium;
+  font-weight: bold;
   border-radius: 10px;
   background-color: #ffd600;
   padding: 20px;
-  font-size: medium;
-  font-weight: bold;
 }
 
 #random-quiz-btn {
   margin: 30px;
-  height: 40px;
-  background-color: #c7a500;
-  padding: 10px;
+  font-size: medium;
+  font-weight: normal;
   border-radius: 10px;
   background-color: #ffd600;
   padding: 20px;
-  font-size: medium;
-  font-weight: normal;
 }
 
 .suggested-quizzes {
