@@ -73,21 +73,21 @@ async function generateHardQuiz() {
   easyDiv.addEventListener("click", playHardQuiz);
 }
 function playEasyQuiz() {
-  category = topic.easy;
+  category = randomTopicsArray[0];
   difficulty = "easy";
   numOfQuestions = 10;
   gameMode = "multiple";
   fetchQuiz();
 }
 function playMediumQuiz() {
-  category = topic.medium;
+  category = randomTopicsArray[1];
   difficulty = "medium";
   numOfQuestions = 10;
   gameMode = "multiple";
   fetchQuiz();
 }
 function playHardQuiz() {
-  category = topic.hard;
+  category = randomTopicsArray[2];
   difficulty = "hard";
   numOfQuestions = 10;
   gameMode = "multiple";
@@ -99,4 +99,3 @@ function generateQuizzes() {
   generateMediumQuiz();
   generateHardQuiz();
 }
-setTimeout(generateQuizzes, 3000);
