@@ -7,6 +7,50 @@
 # w8_team-project-java-lamps
 w8_team-project-java-lamps-wk-8-9 created by GitHub Classroom
 
+##### Wednesday 23rd May
+
+Last bugs to solve
+Merge all braches and get index.html out of Home for Netlify hosting
+Finish Canva slides
+
+##### Tuesday 22nd May
+
+Final touches and testing
+End Page finalised
+Suggested quizes finalised
+Encoding of special caracters fixed
+Fix issue with mixed questions which causes the quiz page to crash
+
+##### Monday 21st May
+
+Start of the merge in the main of the different functionalities
+Solve some issues linked to the inconsistent number of questions for each category (level, game mode)
+
+###### TO DO LIST - TOMORROW
+- URGENT: Each person has to go through the 24 quiz categories and test all the different parameters. Please write down the max number of questions each category has, whether it has all the levels, both game modes etc. @Clarisse maybe you can share the screenshot you took ~ I (Tania) will start with the first 6 categories (array 0-5). Please say which one you will do to avoid duplicates
+- CANVA slides to present our project: Sarah will create it but we should all contribute slides. We will need to provide  a) demo of the website b) things we learned c) challenges we face
+
+###### Individual todos: Edit if anything else comes to mind
+- @Sara M all of the above PLUS 1) media queries for the homepage so that is is responsive 2) test accessibility with lighthouse
+- @Tania All of the above PLUS 1) help with styling (color and border radius of buttons) 2) fix Netflify or set up Github pages
+- @Clarisse All of the above plus 1) fix the double appearance of questions 2) removing the weird quotes from questions
+- @Toby Smith All of the above plus 1) revolve conflicts for your pull request ASAP so Clarisse can link your work to the questions page
+
+##### Sunday 23rd May
+
+Individula coding on each tasks
+
+##### Saturday 22nd May
+
+Hackthon for our full day session
+Solved merge conflicts in the morning linked to the various branches off the main
+Worked on our buttons functionality in the afternoon: how to link main.js to question.js and save the URL
+Did some debugging on the getRandomQuiz Button
+
+##### Friday 21st May
+
+Everyone is working on their own parts of the code as defined by the issues and tasks on GitHub/Projects.
+
 ##### Thursday 20th May
 
 - Agreed on the splitting of the tasks (will reflect on the Projects tab)
