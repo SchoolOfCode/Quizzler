@@ -32,13 +32,12 @@
         <!-- Make your own quiz -->
         <section id="drop-down-section">
           <select id="category-dropdown">
-            <!-- <option id="topic" disabled selected>TOPIC</option> -->
           </select>
 
           <select id="gamemode-dropdown">
             <option disabled selected>GAME MODE</option>
             <option value="multiple">Multiple choice</option>
-            <option value="boolean">True/False</option>
+            <option id = "bool" value="boolean">True/False</option>
           </select>
 
           <select id="difficulty-dropdown">
@@ -48,10 +47,10 @@
             <option value="hard">Difficult</option>
           </select>
 
-          <div id="questions-div">
+          <!-- <div id="questions-div">
             <label for="quantity">NUMBER OF QUESTIONS</label>
             <input type="number" id="num-questions" name="quantity" min="10" max="50" />
-          </div>
+          </div> -->
         </section>
         <section id="buttons-section">
           <button id="generate-quiz-btn">Generate Quiz</button>

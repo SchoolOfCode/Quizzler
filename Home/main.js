@@ -11,7 +11,6 @@ category_dropdown.length = 0;
 category_dropdown.selectedIndex = 0;
 
 let defaultOption = document.createElement("option");
-// defaultOption.disabled = true; // makes it an optgroup!
 defaultOption.label = "TOPIC";
 category_dropdown.add(defaultOption);
 
@@ -21,8 +20,19 @@ async function fetchCategory() {
   return data;
 }
 
+function cleanCategory(category) {
+  return (
+    category.id !== 13 &&
+    category.id !== 19 &&
+    category.id !== 24 &&
+    category.id !== 25 &&
+    category.id !== 26 &&
+    category.id !== 30
+  );
+}
 function loadCategories(data) {
   let category = data.trivia_categories;
+  category = category.filter(cleanCategory);
   for (let i = 0; i < category.length; i++) {
     let option = document.createElement("option");
     option.text = category[i].name;
@@ -33,14 +43,17 @@ function loadCategories(data) {
   generateQuizzes();
 }
 fetchCategory()
-.then((data) => loadCategories(data))
-.catch((err) => console.log(err));
-// fetchCategory().then(loadCategories).catch((err => console.log(err))); this works too :)
+  .then((data) => loadCategories(data))
+  .catch((err) => console.log(err));
 
 function setCategoryValue() {
   let e = document.getElementById("category-dropdown");
   category = e.options[e.selectedIndex].value;
-  console.log(category);
+  if (category == 29) {
+    // comic category disables boolean
+    console.log("boolean disabled");
+    document.getElementById("bool").disabled = true;
+  }
 }
 category_dropdown.addEventListener("change", setCategoryValue);
 
@@ -48,23 +61,15 @@ category_dropdown.addEventListener("change", setCategoryValue);
 function setGameModeValue() {
   let e = document.getElementById("gamemode-dropdown");
   gameMode = e.options[e.selectedIndex].value; // category id passed on to url
+  if (gameMode === "boolean") {
+    document.getElementById("difficulty-dropdown").disabled = true;
+    console.log("difficulty disabled");
+  }
   console.log(gameMode);
 }
 
 const gameMode_dropdown = document.getElementById("gamemode-dropdown");
 gameMode_dropdown.addEventListener("change", setGameModeValue);
-
-// // // NUMBER OF QUESTIONS // // // // // //
-function setNumOfQuestions() {
-  let e = document.getElementById("num-questions");
-  numOfQuestions = e.value;
-  // if (numOfQuestions < 10 || numOfQuestions > 50) {
-  //   alert("Number of questions must be between 10 and 50");  annoying
-  // }
-  console.log(numOfQuestions);
-}
-const num_questions = document.getElementById("num-questions");
-num_questions.addEventListener("input", setNumOfQuestions);
 
 // // // SET DIFFICULTY // // // // // //
 function setDifficulty() {
@@ -77,8 +82,12 @@ difficulty_dropdown.addEventListener("change", setDifficulty);
 
 async function fetchQuiz() {
   let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
-  console.log(quizUrl);
+  console.log("fetchQuiz original URL is:", quizUrl);
+
   if (gameMode === "boolean") {
+    quizUrl = `?amount=${numOfQuestions}&category=${category}&gameMode=${gameMode}`;
+    console.log("generatedQuiz boolean URL is:", quizUrl);
+
     window.location.href = "../Boolean/boolean.html" + quizUrl;
   } else {
     window.location.href = "../Question/question.html" + quizUrl;
@@ -89,18 +98,12 @@ generate_quiz_btn.addEventListener("click", fetchQuiz);
 
 async function getRandomQuiz() {
   console.log(categoryArray);
-  const difficultyArray = ["easy", "medium", "difficult"];
-  difficulty = difficultyArray[Math.floor(Math.random() * difficultyArray.length)];
-  
-  const gameModeArray = ["multiple", "boolean"];
-  gameMode = gameModeArray[Math.floor(Math.random() * gameModeArray.length)];
-  
-  numOfQuestions = Math.floor(Math.random() * (50 - 10 + 1)) + 10; // between 10 and 50
-  
+
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
-  console.log(category);
-  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
-  console.log(quizUrl);
+  console.log("category ID:", category);
+
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&gameMode=${gameMode}`;
+  console.log("quizURL:", quizUrl);
 
   if (gameMode === "boolean") {
     window.location.href = "../Boolean/boolean.html" + quizUrl;
