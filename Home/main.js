@@ -76,7 +76,7 @@ const difficulty_dropdown = document.getElementById("difficulty-dropdown");
 difficulty_dropdown.addEventListener("change", setDifficulty);
 
 async function fetchQuiz() {
-  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&type=${gameMode}`;
   console.log(quizUrl);
   if (gameMode === "boolean") {
     window.location.href = "../Boolean/boolean.html" + quizUrl;
@@ -99,7 +99,7 @@ async function getRandomQuiz() {
   
   category = categoryArray[Math.floor(Math.random() * categoryArray.length)];
   console.log(category);
-  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&type=${gameMode}`;
   console.log(quizUrl);
 
   if (gameMode === "boolean") {
