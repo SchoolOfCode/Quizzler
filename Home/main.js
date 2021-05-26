@@ -49,7 +49,7 @@ fetchCategory()
 function setCategoryValue() {
   let e = document.getElementById('category-dropdown');
   category = e.options[e.selectedIndex].value;
-  if (category == 29 || category == 29 || category == 10) {
+  if (category == 29 || category == 16 || category == 10) {
     // comic category disables boolean
     console.log('boolean disabled');
     document.getElementById('bool').disabled = true;
