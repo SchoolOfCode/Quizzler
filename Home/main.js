@@ -81,7 +81,7 @@ const difficulty_dropdown = document.getElementById('difficulty-dropdown');
 difficulty_dropdown.addEventListener('change', setDifficulty);
 
 async function fetchQuiz() {
-  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&gameMode=${gameMode}`;
+  let quizUrl = `?amount=${numOfQuestions}&category=${category}&difficulty=${difficulty}&type=${gameMode}`;
   console.log('fetchQuiz original URL is:', quizUrl);
 
   if (gameMode === 'boolean') {
